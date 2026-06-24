@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fake-star-detector — is this GitHub repo's hype real?</title>
+    <meta
+      name="description"
+      content="Paste a GitHub repo and see whether its stars are real. Crawls the recent stargazers, flags purchased/bot stars from the timing spikes and the empty accounts behind them. Plus a daily leaderboard of trending repos ranked by how bought their stars look. Public data, no key needed."
+    />
+    <meta property="og:title" content="fake-star-detector ⭐" />
+    <meta property="og:description" content="Is this GitHub repo's hype real? Flags bought/bot stars from the timing spikes and empty accounts. Public data only." />
+    <script type="module" crossorigin src="./assets/index-eouWGodj.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-KZTICTaj.css">
+  </head>
+  <body>
+    <header>
+      <h1>fake-star-detector <span class="star">⭐</span></h1>
+      <p class="tagline">Is this GitHub repo's hype <strong>real?</strong></p>
+      <p class="sub">Crawls a repo's recent stargazers and flags bought/bot stars — the timing spikes and the empty accounts behind them. Public data only, nothing about you is sent anywhere.</p>
+
+      <form id="check" class="check">
+        <input id="repo" type="text" placeholder="owner/repo  (e.g. facebook/react)" spellcheck="false" autocapitalize="off" autocomplete="off" />
+        <button id="go" type="submit">check ⭐</button>
+      </form>
+      <details class="tokrow">
+        <summary>add a GitHub token (optional — raises the rate limit)</summary>
+        <input id="token" type="password" placeholder="ghp_… — kept in this tab only, sent straight to github.com" autocomplete="off" />
+        <p class="dim">Without a token, GitHub allows ~60 checks/hour from your browser. A read-only token raises it to 5,000. It never leaves your browser except to call the GitHub API directly.</p>
+      </details>
+      <div id="status" class="status"></div>
+    </header>
+
+    <main>
+      <div id="result" class="result"></div>
+
+      <section class="leaderboard">
+        <h2>📉 Today's trending, ranked by how bought their stars look</h2>
+        <p class="dim" id="board-meta"></p>
+        <div id="board" class="board"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://www.npmjs.com/package/fake-star-detector"><code>fake-star-detector</code></a> —
+        same engine in your terminal: <code>npx fake-star-detector owner/repo</code>.
+        <a href="https://github.com/didrod205/fake-star-detector">GitHub</a> · MIT
+      </p>
+      <p class="dim">A <strong>heuristic, not proof.</strong> A high score means a burst of recent stars from empty, brand-new accounts — the shape of purchased stars — not a certainty. It points at repos, from public data; judge for yourself. The leaderboard auto-updates a few times a day.</p>
+    </footer>
+
+  </body>
+</html>
